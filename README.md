@@ -1,2 +1,2 @@
 # vite-vue3-template
-Vite+Vue3项目模板
+Vue 3 + Typescript + Vite 项目模板
