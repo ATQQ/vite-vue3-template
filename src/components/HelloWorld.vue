@@ -30,7 +30,8 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent,onMounted } from 'vue'
+import { useRoute,useRouter} from 'vue-router'
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -41,8 +42,12 @@ export default defineComponent({
   },
   setup: () => {
     const count = ref(0)
+    onMounted(()=>{
+      const route = useRoute()
+      console.log(route.path);
+    })
     return { count }
-  }
+  },
 })
 </script>
 
