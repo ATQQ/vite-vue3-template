@@ -11,18 +11,30 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <h2>Vuex</h2>
+    <h3>{{ isEven ? 'Even' : 'Odd' }}</h3>
+    <div>
+      <button @click="add">Sync Add</button>
+      <button @click="asyncAdd">Async Add</button>
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   setup: () => {
+    const store = useStore()
+
     const id = computed(() => {
       return ~~(Math.random() * 1000)
     })
     return {
-      id
+      id,
+      isEven: computed(() => store.getters['m1/isEven']),
+      add: () => store.commit('m1/increase'),
+      asyncAdd: () => store.dispatch('m1/increase')
     }
   }
 })
