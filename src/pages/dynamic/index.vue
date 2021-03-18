@@ -1,22 +1,16 @@
 <template>
     <div>
-        <HelloWorld :msg="`${route.params.id}`" />
+        <h1>{{ $route.params.id }}</h1>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import {useRoute} from 'vue-router'
 
 import HelloWorld from '../../components/HelloWorld.vue';
 export default defineComponent({
-    name:'dynamic',
-    components:{
+    name: 'dynamic',
+    components: {
         HelloWorld
-    },
-    setup:()=>{
-        return {
-            route:useRoute()
-        }
     }
 })
 </script>
