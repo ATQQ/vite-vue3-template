@@ -5,4 +5,4 @@ Vue 3 + Typescript + Vite 项目模板
 * [x] TS
 * [x] Vuex
 * [x] Vue-Router
-* [ ] Axios
+* [x] Axios
