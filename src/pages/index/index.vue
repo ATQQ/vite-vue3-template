@@ -29,16 +29,15 @@ export default defineComponent({
   setup: () => {
     const store = useStore()
 
-    const id = computed(() => {
-      return ~~(Math.random() * 1000)
-    })
+    // eslint-disable-next-line no-bitwise
+    const id = computed(() => ~~(Math.random() * 1000))
     return {
       id,
       isEven: computed(() => store.getters['m1/isEven']),
       add: () => store.commit('m1/increase'),
-      asyncAdd: () => store.dispatch('m1/increase')
+      asyncAdd: () => store.dispatch('m1/increase'),
     }
-  }
+  },
 })
 </script>
 <style>

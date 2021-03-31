@@ -6,14 +6,15 @@
 </template>
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
-import { useStore } from 'vuex';
+import { useStore } from 'vuex'
+
 export default defineComponent({
-    setup() {
-        const store = useStore()
-        return {
-            count: computed(() => store.state.m1.count)
-        }
+  setup() {
+    const store = useStore()
+    return {
+      count: computed(() => store.state.m1.count),
     }
+  },
 })
 </script>
 <style lang="scss" scoped>

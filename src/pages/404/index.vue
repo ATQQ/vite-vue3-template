@@ -4,14 +4,15 @@
     </div>
 </template>
 <script lang="ts">
-import { defineComponent,onMounted } from 'vue'
-import { useRoute } from 'vue-router';
+import { defineComponent, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
 export default defineComponent({
-    setup:()=>{
-        onMounted(()=>{
-            const route = useRoute()
-            console.log(route.params);
-        })
-    }
+  setup: () => {
+    onMounted(() => {
+      const route = useRoute()
+      console.log(route.params)
+    })
+  },
 })
 </script>

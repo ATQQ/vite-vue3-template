@@ -1,18 +1,16 @@
 {
-    "parser": "@typescript-eslint/parser",
+    "parser": "vue-eslint-parser",
     "env": {
         "browser": true,
         "commonjs": true,
         "es2021": true
     },
     "parserOptions": {
-        "ecmaVersion": 2021
-    },
-    "settings": {
-        "import/resolver": {
-            "node": {
-              "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
+        "ecmaVersion": 2021,
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
         }
     },
     "extends": [
@@ -39,6 +37,7 @@
             "warn",
             "never"
         ],
+        "import/no-unresolved":"off",
         "todo-ddl/diy": "warn",
         "import/prefer-default-export":"off",
         "no-param-reassign":"warn"
