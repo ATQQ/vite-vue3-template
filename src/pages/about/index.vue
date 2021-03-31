@@ -10,10 +10,14 @@ import { useStore } from 'vuex';
 export default defineComponent({
     setup() {
         const store = useStore()
-
         return {
             count: computed(() => store.state.m1.count)
         }
     }
 })
 </script>
+<style lang="scss" scoped>
+h2{
+    color: red;
+}
+</style>
