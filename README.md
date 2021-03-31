@@ -6,3 +6,5 @@ Vue 3 + Typescript + Vite 项目模板
 * [x] Vuex
 * [x] Vue-Router
 * [x] Axios
+* [x] Provide/inject
+* [x] polyfill.io
