@@ -6,6 +6,7 @@
       <router-link to="/about">About</router-link>
       <router-link :to="`/dynamic/${id}`">Dynamic</router-link>
       <router-link :to="`/axios`">Axios</router-link>
+      <router-link :to="`/element`">Element UI Plus</router-link>
     </p>
     <router-view v-slot="{ Component }">
       <transition name="slide-fade">
