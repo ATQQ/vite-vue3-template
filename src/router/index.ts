@@ -3,8 +3,8 @@ import registerRouteGuard from './Interceptor'
 import routes from './routes'
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.VITE_ROUTER_BASE as string),
-    routes,
+  history: createWebHistory(import.meta.env.VITE_ROUTER_BASE as string),
+  routes,
 })
 
 // 注册路由守卫

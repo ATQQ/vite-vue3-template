@@ -1,12 +1,13 @@
 import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+
 import router from './router'
 import store from './store'
 
 import App from './App.vue'
 import Axios from './apis/ajax'
 
-import ElementPlus from 'element-plus';
-import 'element-plus/lib/theme-chalk/index.css';
+import 'element-plus/lib/theme-chalk/index.css'
 
 document.title = import.meta.env.VITE_APP_TITLE as string
 

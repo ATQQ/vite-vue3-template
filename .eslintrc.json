@@ -1,0 +1,46 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:vue/vue3-essential",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+        "vue",
+        "@typescript-eslint",
+        "todo-ddl"
+    ],
+    "rules": {
+        "@typescript-eslint/ban-types":"off",
+        "@typescript-eslint/no-explicit-any":"off",
+        "@typescript-eslint/explicit-module-boundary-types":"off",
+        "import/extensions":"off",
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "never"
+        ],
+        "todo-ddl/diy": "warn",
+        "import/prefer-default-export":"off",
+        "no-param-reassign":"warn"
+    }
+}

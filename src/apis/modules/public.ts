@@ -5,16 +5,16 @@ import ajax from '../ajax'
  * @param mobile 手机号
  */
 function getCode(phone: string) {
-    return ajax.get<any, BaseResponse>(
-        'public/code',
-        {
-            params: {
-                phone,
-            },
-        }
-    )
+  return ajax.get<any, BaseResponse>(
+    'public/code',
+    {
+      params: {
+        phone,
+      },
+    },
+  )
 }
 
 export default {
-    getCode,
+  getCode,
 }
