@@ -1,7 +1,6 @@
-# vite-vue3-template
-Vue 3 + Typescript + Vite 项目模板
+# Vite2.x + Vue 3.x + Typescript
 
-## Already Import
+## Features
 * [x] [vite](https://github.com/vitejs/vite)
 * [x] [vue3](https://v3.vuejs.org/)
 * [x] [@vue/compiler-sfc](https://github.com/vuejs/rfcs/pull/227)
@@ -16,7 +15,6 @@ Vue 3 + Typescript + Vite 项目模板
 * [x] [Eslint](https://eslint.org/)
 * [x] [Jest](https://jestjs.io/)
 
-## Plan
 ## Catalog
 ```sh
 src
