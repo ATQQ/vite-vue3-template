@@ -1,5 +1,6 @@
 # Vite2.x + Vue 3.x + Typescript
 
+[preview](https://vite-vue3-template-2d76i8beae2d0-1256505457.tcloudbaseapp.com/)
 ## Features
 * [x] [vite](https://github.com/vitejs/vite)
 * [x] [vue3](https://v3.vuejs.org/)
@@ -14,30 +15,9 @@
 * [x] [Sass](https://github.com/sass/sass)
 * [x] [Eslint](https://eslint.org/)
 * [x] [Jest](https://jestjs.io/)
-
-## Catalog
+## Clone Template
 ```sh
-src
-├── apis
-│   ├── ajax.ts
-│   ├── index.ts
-│   └── modules 
-├── assets
-├── components 
-├── pages
-├── router
-│   ├── index.ts
-│   ├── Interceptor
-│   └── routes
-├── store
-│   ├── index.ts
-│   └── modules
-├── utils
-├── @types
-├── shims-vue.d.ts
-├── env.d.ts
-├── App.vue
-└── main.ts
+npx degit atqq/vite-vue3-template#main my-project
 ```
 ## Usage
 ### install dep

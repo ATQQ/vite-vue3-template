@@ -1,0 +1,35 @@
+{
+  "version": "2.0",
+  "envId": "vite-vue3-template-2d76i8beae2d0",
+  "region": "ap-guangzhou",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "functionRoot": "cloudfunctions",
+  "framework": {
+    "name": "vite-vue3-template",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "installCommand": "yarn install --prefer-offline --no-audit --progress=false",
+          "buildCommand": "npm run build",
+          "outputPath": "dist",
+          "cloudPath": "/",
+          "envVariables": {
+            "VUE_APP_ENV_ID": "{{env.ENV_ID}}"
+          }
+        }
+      },
+      "auth": {
+        "use": "@cloudbase/framework-plugin-auth",
+        "inputs": {
+          "configs": [
+            {
+              "platform": "NONLOGIN",
+              "status": "ENABLE"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

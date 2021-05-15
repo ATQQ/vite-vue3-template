@@ -7,7 +7,9 @@
     "build:staging": "vite build --mode staging",
     "serve": "vite preview",
     "lint": "eslint src --fix",
-    "test": "jest --verbose ./__tests__"
+    "test": "jest --verbose ./__tests__",
+    "tcb:deploy": "tcb framework deploy",
+    "tcb:login": "tcb login"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -17,6 +19,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@cloudbase/cli": "^1.7.0",
     "@types/axios": "^0.14.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.3.0",
