@@ -1,8 +1,10 @@
 # vite-vue3-template
 Vue 3 + Typescript + Vite 项目模板
 
+## 目前已集成
 * [x] [vite](https://github.com/vitejs/vite)
 * [x] [vue3](https://v3.vuejs.org/)
+* [x] [@vue/compiler-sfc](https://github.com/vuejs/rfcs/pull/227)
 * [x] [TypeScript](https://github.com/microsoft/TypeScript/#readme)
 * [x] [Vuex](https://github.com/vuejs/vuex#readme)
 * [x] [Vue-Router](https://next.router.vuejs.org/)

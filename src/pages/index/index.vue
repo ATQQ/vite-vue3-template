@@ -21,24 +21,17 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, computed } from 'vue'
+<script setup>
+import { computed } from 'vue'
 import { useStore } from 'vuex'
 
-export default defineComponent({
-  setup: () => {
-    const store = useStore()
+const store = useStore()
 
-    // eslint-disable-next-line no-bitwise
-    const id = computed(() => ~~(Math.random() * 1000))
-    return {
-      id,
-      isEven: computed(() => store.getters['m1/isEven']),
-      add: () => store.commit('m1/increase'),
-      asyncAdd: () => store.dispatch('m1/increase'),
-    }
-  },
-})
+// eslint-disable-next-line no-bitwise
+const id = computed(() => ~~(Math.random() * 1000))
+const isEven = computed(() => store.getters['m1/isEven'])
+const add = () => store.commit('m1/increase')
+const asyncAdd = () => store.dispatch('m1/increase')
 </script>
 <style>
 .slide-fade-enter-active {
