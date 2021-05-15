@@ -1,3 +1,1 @@
-import p from './modules/public'
-
-export const publicApi = p
+export { default as publicApi } from './modules/public'
