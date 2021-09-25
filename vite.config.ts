@@ -4,15 +4,14 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-  ],
+  plugins: [vue()],
   build: {
     target: 'modules', // 默认值
     // sourcemap: true,
   },
   server: {
     port: 8080,
+    host: '0.0.0.0',
     proxy: {
       '/api/': {
         target: 'http://localhost:3000',
