@@ -14,7 +14,7 @@ const { count } = storeToRefs(store)
 
 onMounted(() => {
   store.$patch((v) => {
-    v.count++
+    v.count += 1
   })
 })
 </script>

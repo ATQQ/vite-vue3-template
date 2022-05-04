@@ -25,7 +25,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      # 配置rsa密钥自动登陆
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      # 准备 pnpm环境
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.0.0
+      # 配置自动部署
       - name: Deploy to Tencent CloudBase
         uses: TencentCloudBase/cloudbase-action@v2
         with:

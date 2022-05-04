@@ -10,8 +10,8 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "installCommand": "yarn install --prefer-offline --no-audit --progress=false",
-          "buildCommand": "npm run build",
+          "installCommand": "pnpm install",
+          "buildCommand": "pnpm build",
           "outputPath": "dist",
           "cloudPath": "/",
           "envVariables": {

@@ -17,10 +17,15 @@ export default defineComponent({
     const $http = inject<AxiosInstance>('$http')
 
     const getCode = () => {
-      publicApi.getCode2(phone.value).then((v) => {
-        console.log(v)
-        ElMessage.success(`获取成功 ${v.num}`)
-      })
+      publicApi
+        .getCode2(phone.value)
+        .then((v) => {
+          console.log(v)
+          ElMessage.success(`获取成功 ${v.num}`)
+        })
+        .catch((err) => {
+          ElMessage.error(err.message)
+        })
     }
     return {
       phone,
