@@ -7,7 +7,9 @@
     "build:test": "vite build --mode test",
     "serve": "vite preview",
     "lint": "eslint src --fix",
-    "test": "jest --verbose ./__tests__",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
     "tcb:deploy": "tcb framework deploy",
     "tcb:login": "tcb login"
   },
@@ -24,6 +26,8 @@
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@vitejs/plugin-vue": "^1.10.2",
+    "@vitest/ui": "^0.10.2",
+    "c8": "^7.11.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -34,6 +38,7 @@
     "unplugin-auto-import": "^0.7.1",
     "unplugin-element-plus": "^0.4.0",
     "unplugin-vue-components": "^0.19.3",
-    "vite": "^2.9.7"
+    "vite": "^2.9.7",
+    "vitest": "^0.10.2"
   }
 }
