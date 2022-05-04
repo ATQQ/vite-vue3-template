@@ -1,13 +1,32 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import ElementPlus from 'unplugin-element-plus/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    // Element Plus 的UI按需引入配置
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+    ElementPlus({
+      defaultLocale: 'zh-cn',
+    }),
+  ],
+  optimizeDeps: {
+    include: ['vue', 'vue-router', 'vuex', 'axios'],
+  },
   build: {
     target: 'modules', // 默认值
-    // sourcemap: true,
+    sourcemap: true,
   },
   server: {
     port: 8080,
@@ -19,6 +38,11 @@ export default defineConfig({
         rewrite: (p) => p.replace(/^\/api/, ''),
       },
       '/api-prod/': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api-prod/, ''),
+      },
+      '/api-test/': {
         target: 'http://localhost:3001',
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/api-prod/, ''),

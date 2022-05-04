@@ -4,7 +4,7 @@ import store from './store'
 
 import App from './App.vue'
 import Axios from './apis/ajax'
-import mountElementUI from './utils/elementUI'
+// import mountElementUI from './utils/elementUI'
 
 document.title = import.meta.env.VITE_APP_TITLE
 
@@ -14,5 +14,6 @@ app.provide('$http', Axios)
 
 app.use(router)
 app.use(store)
-mountElementUI(app)
+// 量引入Element UI
+// mountElementUI(app)
 app.mount('#app')
