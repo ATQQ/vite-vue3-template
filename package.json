@@ -6,7 +6,7 @@
     "build": "vite build",
     "build:test": "vite build --mode test",
     "serve": "vite preview",
-    "lint": "eslint src --fix --ext .ts,.js,.vue",
+    "lint": "eslint src --ext .ts,.js,.vue --fix",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
@@ -30,7 +30,9 @@
     "c8": "^7.11.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-todo-ddl": "^1.1.1",
     "eslint-plugin-vue": "^7.20.0",
     "sass": "^1.51.0",
@@ -39,6 +41,7 @@
     "unplugin-element-plus": "^0.4.0",
     "unplugin-vue-components": "^0.19.3",
     "vite": "^2.9.7",
+    "vite-plugin-eslint": "^1.6.0",
     "vitest": "^0.10.2"
   }
 }

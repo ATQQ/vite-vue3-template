@@ -10,13 +10,11 @@
     "esModuleInterop": true,
     "allowJs": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client","@types/node","jest"],
+    "types": ["vite/client", "@types/node"],
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/":["src/components/*"]
+      "@/*": ["src/*"],
+      "@components/": ["src/components/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

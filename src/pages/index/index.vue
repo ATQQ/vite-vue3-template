@@ -43,9 +43,10 @@ const isEven = computed(() => store.count % 2 === 0)
 // const isEven = computed(() => store.isEven)
 
 // add 方法
-const add = () => store.$patch((v) => {
-  v.count += 1
-})
+const add = () =>
+  store.$patch((v) => {
+    v.count += 1
+  })
 // or actions
 // const add = () => store.synIncrease()
 
