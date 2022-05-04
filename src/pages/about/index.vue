@@ -1,24 +1,25 @@
 <template>
-    <div>
-        <h1>About Page</h1>
-        <h2>{{ count }}</h2>
-    </div>
+  <div>
+    <h1>About Page</h1>
+    <h2>{{ count }}</h2>
+  </div>
 </template>
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useStore } from 'vuex'
+<script lang="ts" setup>
+import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue'
+import { useCountStore } from '@/store'
 
-export default defineComponent({
-  setup() {
-    const store = useStore()
-    return {
-      count: computed(() => store.state.m1.count),
-    }
-  },
+const store = useCountStore()
+const { count } = storeToRefs(store)
+
+onMounted(() => {
+  store.$patch((v) => {
+    v.count++
+  })
 })
 </script>
 <style lang="scss" scoped>
-h2{
-    color: red;
+h2 {
+  color: red;
 }
 </style>
