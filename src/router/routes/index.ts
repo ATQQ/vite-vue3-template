@@ -23,12 +23,12 @@ const routes: RouteRecordRaw[] = [
         component: Dynamic,
         meta: {
           requireLogin: false,
-          isAdmin: true,
+          isAdmin: true
         },
-        name: 'dynamic',
-      },
-    ],
-  },
+        name: 'dynamic'
+      }
+    ]
+  }
 ]
 
 export default routes

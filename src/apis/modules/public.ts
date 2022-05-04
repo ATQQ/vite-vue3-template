@@ -7,8 +7,8 @@ import ajax from '../ajax'
 function getCode(phone: string): ResponseData<{ num: number }> {
   return ajax.get('random/code', {
     params: {
-      phone,
-    },
+      phone
+    }
   })
 }
 
@@ -19,12 +19,12 @@ function getCode(phone: string): ResponseData<{ num: number }> {
 function getCode2(phone: string): Promise<{ num: number }> {
   return ajax.get('random/code', {
     params: {
-      phone,
-    },
+      phone
+    }
   })
 }
 
 export default {
   getCode,
-  getCode2,
+  getCode2
 }

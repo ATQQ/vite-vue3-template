@@ -16,6 +16,7 @@
 * [x] [TypeScript](https://github.com/microsoft/TypeScript/#readme)
 * [x] [Sass](https://github.com/sass/sass)
 * [x] [Eslint](https://eslint.org/)
+* [x] [Prettier](https://prettier.io/)
 * [x] [Vitest](https://vitest.dev/) - replace jest
 
 ## Use This Template

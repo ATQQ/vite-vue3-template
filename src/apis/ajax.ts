@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_APP_AXIOS_BASE_URL,
+  baseURL: import.meta.env.VITE_APP_AXIOS_BASE_URL
 })
 
 /**
@@ -11,7 +11,7 @@ instance.interceptors.request.use((config) => {
   const { method, params } = config
   // 附带鉴权的token
   const headers: any = {
-    token: localStorage.getItem('token'),
+    token: localStorage.getItem('token')
   }
   // 不缓存get请求
   if (method === 'get') {
@@ -22,14 +22,14 @@ instance.interceptors.request.use((config) => {
     headers['Content-type'] = 'application/json;'
     Object.assign(config, {
       data: params,
-      params: {},
+      params: {}
     })
   }
 
-  return ({
+  return {
     ...config,
-    headers,
-  })
+    headers
+  }
 })
 
 /**

@@ -1,18 +1,18 @@
 import { Router } from 'vue-router'
 
 declare module 'vue-router' {
-    interface RouteMeta {
-        // 是可选的
-        isAdmin?: boolean
-        // 是否需要登录
-        requireLogin?: boolean
-    }
+  interface RouteMeta {
+    // 是可选的
+    isAdmin?: boolean
+    // 是否需要登录
+    requireLogin?: boolean
+  }
 }
 
 function registerRouteGuard(router: Router) {
   /**
-     * 全局前置守卫
-     */
+   * 全局前置守卫
+   */
   router.beforeEach((to, from) => {
     if (to.meta.requireLogin) {
       if (from.path === '/') {
@@ -24,8 +24,8 @@ function registerRouteGuard(router: Router) {
   })
 
   /**
-     * 全局解析守卫
-     */
+   * 全局解析守卫
+   */
   router.beforeResolve(async (to) => {
     if (to.meta.isAdmin) {
       try {
@@ -44,8 +44,8 @@ function registerRouteGuard(router: Router) {
   })
 
   /**
-     * 全局后置守卫
-     */
+   * 全局后置守卫
+   */
   router.afterEach((to, from, failure) => {
     // 改标题,监控上报一些基础信息
     // sendToAnalytics(to.fullPath)

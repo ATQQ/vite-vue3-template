@@ -17,7 +17,9 @@
     "airbnb-base",
     "eslint:recommended",
     "plugin:vue/vue3-essential",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "plugins": ["vue", "@typescript-eslint", "todo-ddl"],
   "rules": {

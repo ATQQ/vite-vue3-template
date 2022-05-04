@@ -29,8 +29,8 @@ export default defineComponent({
     }
     return {
       phone,
-      getCode,
+      getCode
     }
-  },
+  }
 })
 </script>
