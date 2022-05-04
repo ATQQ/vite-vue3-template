@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 export default defineComponent({
   name: 'HelloWorld',

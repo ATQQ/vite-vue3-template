@@ -22,7 +22,7 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    include: ['vue', 'vue-router', 'vuex', 'axios'],
+    include: ['vue', 'vue-router', 'pinia', 'axios'],
   },
   build: {
     target: 'modules', // 默认值

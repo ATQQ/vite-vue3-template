@@ -3,21 +3,20 @@
 [preview](https://vite-vue3-template-2d76i8beae2d0-1256505457.tcloudbaseapp.com/)
 ## Features
 ### PROD
-* [x] [vue3](https://v3.vuejs.org/)
-* [x] [Vuex](https://github.com/vuejs/vuex#readme)
-* [x] [Vue-Router](https://next.router.vuejs.org/)
+* [x] [Vue3](https://vuejs.org/)
+* [x] [Pinia](https://pinia.vuejs.org/) - replace vuex
+* [x] [Vue-Router](https://router.vuejs.org/)
 * [x] [Axios](https://github.com/axios/axios)
 * [x] [Provide/inject](https://v3.vuejs.org/guide/component-provide-inject.html#provide-inject)
 * [x] [polyfill.io](https://github.com/Financial-Times/polyfill-service)
 * [x] [Element UI Plus](https://github.com/element-plus/element-plus)
 
 ### DEV
-* [x] [vite](https://github.com/vitejs/vite)
-* [x] [@vue/compiler-sfc](https://github.com/vuejs/rfcs/pull/227)
+* [x] [Vite](https://github.com/vitejs/vite)
 * [x] [TypeScript](https://github.com/microsoft/TypeScript/#readme)
 * [x] [Sass](https://github.com/sass/sass)
 * [x] [Eslint](https://eslint.org/)
-* [x] [Jest](https://jestjs.io/)
+* [x] [Vitest](https://vitest.dev/) - replace jest
 
 ## Use This Template
 ```sh
@@ -28,21 +27,26 @@ or
 Visit：[https://github.com/ATQQ/vite-vue3-template/generate](https://github.com/ATQQ/vite-vue3-template/generate)
 ## Usage
 ### install dep
+need install pnpm
 ```sh
-yarn install
+npm i -g pnpm
+```
+
+```sh
+pnpm install
 ```
 
 ### Dev
 ```sh
-yarn dev
+pnpm dev
 ```
 
 ### Build
 ```sh
-yarn build
+pnpm build
 ```
 
 ### Preview Build
 ```sh
-yarn serve
+pnpm serve
 ```

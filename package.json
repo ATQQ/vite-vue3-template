@@ -16,9 +16,9 @@
   "dependencies": {
     "axios": "^0.27.2",
     "element-plus": "^2.1.11",
+    "pinia": "^2.0.13",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.14",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@cloudbase/cli": "^1.12.4",
