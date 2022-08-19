@@ -1,4 +1,4 @@
-# Vite2.x + Vue 3.x + Typescript
+# Vite3.x + Vue 3.x + Typescript
 
 [preview](https://vite-vue3-template-2d76i8beae2d0-1256505457.tcloudbaseapp.com/)
 ## Features
