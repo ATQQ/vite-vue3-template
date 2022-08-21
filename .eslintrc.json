@@ -18,16 +18,28 @@
     "eslint:recommended",
     "plugin:vue/vue3-essential",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "vue",
+    "@typescript-eslint",
+    "todo-ddl",
     "prettier"
   ],
-  "plugins": ["vue", "@typescript-eslint", "todo-ddl"],
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/extensions": "off",
-    "quotes": ["warn", "single"],
-    "semi": ["warn", "never"],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "warn",
+      "never"
+    ],
     "import/no-unresolved": "off",
     "todo-ddl/diy": "warn",
     "import/prefer-default-export": "off",
