@@ -12,8 +12,9 @@
 * [x] [Element UI Plus](https://github.com/element-plus/element-plus)
 
 ### DEV
-* [x] [Vite](https://github.com/vitejs/vite)
-* [x] [TypeScript](https://github.com/microsoft/TypeScript/#readme)
+* [x] [PNPM 8](https://pnpm.io/zh/cli/run)
+* [x] [Vite 4](https://github.com/vitejs/vite)
+* [x] [TypeScript 5](https://github.com/microsoft/TypeScript/#readme)
 * [x] [Sass](https://github.com/sass/sass)
 * [x] [Eslint](https://eslint.org/)
 * [x] [Prettier](https://prettier.io/)
@@ -27,9 +28,12 @@ or
 
 Visit：[https://github.com/ATQQ/vite-vue3-template/generate](https://github.com/ATQQ/vite-vue3-template/generate)
 ## Usage
+**建议使用 >= Node v18**
+
 ### install dep
 need install pnpm
 ```sh
+# pnpm8要求 Node >= 16
 npm i -g pnpm
 ```
 
