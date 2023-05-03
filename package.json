@@ -9,9 +9,7 @@
     "lint": "eslint --ext .ts,.js,.vue --fix ./src",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage",
-    "tcb:deploy": "tcb framework deploy",
-    "tcb:login": "tcb login"
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -21,7 +19,6 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@cloudbase/cli": "^1.12.6",
     "@types/node": "^18.16.3",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",

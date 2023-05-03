@@ -20,6 +20,7 @@ export default defineConfig({
     ElementPlus({
       defaultLocale: 'zh-cn'
     }),
+    // 构建和dev时是否调用eslint检查代码，不需要可移除
     viteEslint()
   ],
   optimizeDeps: {
