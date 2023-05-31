@@ -1,4 +1,4 @@
-# Vite3.x + Vue 3.x + Typescript
+# Vite4.x + Vue 3.x + Typescript
 
 [preview](https://http://vite.vue3.sugarat.top/)
 ## Features
@@ -29,6 +29,8 @@ or
 Visit：[https://github.com/ATQQ/vite-vue3-template/generate](https://github.com/ATQQ/vite-vue3-template/generate)
 ## Usage
 **建议使用 >= Node v18**
+
+![](https://img.cdn.sugarat.top/mdImg/MTY4NTU0MjM3NTI1Mw==685542375253)
 
 ### install dep
 need install pnpm
