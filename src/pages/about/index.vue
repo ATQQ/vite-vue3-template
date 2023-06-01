@@ -12,7 +12,6 @@ import { useCountStore } from '@/store'
 const store = useCountStore()
 const { count } = storeToRefs(store)
 
-// todo: use onMounted
 onMounted(() => {
   store.$patch((v) => {
     v.count += 1

@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="../../assets/logo.png" />
+  <div class="index-pages">
+    <h1>Dashboard Routes</h1>
     <p class="links">
-      <router-link to="/home">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link :to="`/dynamic/${id}`">Dynamic</router-link>
-      <router-link :to="`/axios`">Axios</router-link>
-      <router-link :to="`/element`">Element UI Plus</router-link>
+      <router-link :to="`/dashboard/dynamic/${id}`">Dynamic</router-link>
+      <router-link :to="`/dashboard/axios`">Axios</router-link>
+      <router-link :to="`/dashboard/element`">Element UI Plus</router-link>
     </p>
     <router-view v-slot="{ Component }">
       <transition name="slide-fade">
@@ -25,6 +23,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
+import { RouterLink, RouterView } from 'vue-router'
 import { useCountStore } from '@/store'
 
 const id = computed(() => ~~(Math.random() * 1000))
@@ -72,5 +71,22 @@ const asyncAdd = () => store.asyncIncrease()
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+</style>
+<style scoped>
+.index-pages {
+  text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 1024px) {
+  .index-pages {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 </style>

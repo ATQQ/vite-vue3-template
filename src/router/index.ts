@@ -3,7 +3,7 @@ import registerRouteGuard from './Interceptor'
 import routes from './routes'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VITE_ROUTER_BASE as string),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
