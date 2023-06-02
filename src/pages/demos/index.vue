@@ -1,6 +1,6 @@
 <template>
   <div class="index-pages">
-    <h1>Dashboard Routes</h1>
+    <h1>Demos Routes</h1>
     <p class="links">
       <router-link :to="`/demos/element`">Element UI Plus</router-link>
       <router-link :to="`/demos/dynamic/${id}`">Dynamic</router-link>
@@ -10,7 +10,9 @@
     <div class="demos-view-wrapper">
       <router-view v-slot="{ Component }">
         <transition name="slide-fade">
-          <component :is="Component" />
+          <div>
+            <component :is="Component" />
+          </div>
         </transition>
       </router-view>
     </div>
