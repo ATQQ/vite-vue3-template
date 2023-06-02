@@ -1,15 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router'
-import HomeView from '../../pages/HomeView.vue'
+import HomeView from '@/pages/HomeView.vue'
+import Dynamic from '@/pages/dashboard/dynamic/index.vue'
 
-import Home from '../../pages/home/index.vue'
-import About from '../../pages/about/index.vue'
-import Dynamic from '../../pages/dynamic/index.vue'
+const NotFind = () => import('@/pages/404/index.vue')
+const DashboardWrapper = () => import('@/pages/dashboard/index.vue')
+const Axios = () => import('@/pages/dashboard/axios/index.vue')
+const Element = () => import('@/pages/dashboard/element/index.vue')
 
-const NotFind = () => import('../../pages/404/index.vue')
-const Index = () => import('../../pages/index/index.vue')
-const Axios = () => import('../../pages/axios/index.vue')
-const Element = () => import('../../pages/element/index.vue')
 const routes: RouteRecordRaw[] = [
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFind },
   {
     path: '/',
     name: 'home',
@@ -26,10 +25,8 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: Index,
+    component: DashboardWrapper,
     children: [
-      { path: 'home', component: Home, name: 'home-children' },
-      { path: 'about', component: About, name: 'about-children' },
       { path: 'axios', component: Axios, name: 'axios' },
       { path: 'element', component: Element, name: 'element' },
       {
@@ -42,8 +39,7 @@ const routes: RouteRecordRaw[] = [
         name: 'dynamic'
       }
     ]
-  },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFind }
+  }
 ]
 
 export default routes

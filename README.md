@@ -1,6 +1,6 @@
 # Vite4.x + Vue 3.x + Typescript
 
-[preview](https://http://vite.vue3.sugarat.top/)
+[preview](https://vite.vue3.sugarat.top/)
 ## Features
 ### PROD
 * [x] [Vue3](https://vuejs.org/)
