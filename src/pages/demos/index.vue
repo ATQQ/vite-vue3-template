@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="../../assets/logo.png" />
+  <div class="index-pages">
+    <h1>Demos Routes</h1>
     <p class="links">
-      <router-link to="/home">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link :to="`/dynamic/${id}`">Dynamic</router-link>
-      <router-link :to="`/axios`">Axios</router-link>
-      <router-link :to="`/element`">Element UI Plus</router-link>
+      <router-link :to="`/demos/element`">Element UI Plus</router-link>
+      <router-link :to="`/demos/dynamic/${id}`">Dynamic</router-link>
+      <router-link :to="`/demos/axios`">Axios</router-link>
+      <router-link :to="`/demos/vueuse`">VueUse</router-link>
     </p>
-    <router-view v-slot="{ Component }">
-      <transition name="slide-fade">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-    <h2>Pinia(Replace Vuex)</h2>
+    <div class="demos-view-wrapper">
+      <router-view v-slot="{ Component }">
+        <transition name="slide-fade">
+          <div>
+            <component :is="Component" />
+          </div>
+        </transition>
+      </router-view>
+    </div>
+
+    <h2>Pinia</h2>
     <h3>{{ isEven ? 'Even' : 'Odd' }}</h3>
     <h3>{{ count }}</h3>
     <div>
@@ -25,6 +29,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
+import { RouterLink, RouterView } from 'vue-router'
 import { useCountStore } from '@/store'
 
 const id = computed(() => ~~(Math.random() * 1000))
@@ -72,5 +77,25 @@ const asyncAdd = () => store.asyncIncrease()
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+</style>
+<style scoped>
+.index-pages {
+  text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 1024px) {
+  .index-pages {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.demos-view-wrapper {
+  padding: 40px;
 }
 </style>

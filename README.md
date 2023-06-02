@@ -1,6 +1,6 @@
 # Vite4.x + Vue 3.x + Typescript
 
-[preview](https://http://vite.vue3.sugarat.top/)
+[preview](https://vite.vue3.sugarat.top/)
 ## Features
 ### PROD
 * [x] [Vue3](https://vuejs.org/)
@@ -10,6 +10,7 @@
 * [x] [Provide/inject](https://v3.vuejs.org/guide/component-provide-inject.html#provide-inject)
 * [x] [polyfill.io](https://github.com/Financial-Times/polyfill-service)
 * [x] [Element UI Plus](https://github.com/element-plus/element-plus)
+* [x] [VueUse](https://vueuse.org/)
 
 ### DEV
 * [x] [PNPM 8](https://pnpm.io/zh/cli/run)

@@ -1,4 +1,4 @@
-import { Router } from 'vue-router'
+import type { Router } from 'vue-router'
 
 declare module 'vue-router' {
   interface RouteMeta {
