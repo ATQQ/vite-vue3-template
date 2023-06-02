@@ -2,16 +2,20 @@
   <div class="index-pages">
     <h1>Dashboard Routes</h1>
     <p class="links">
-      <router-link :to="`/dashboard/dynamic/${id}`">Dynamic</router-link>
-      <router-link :to="`/dashboard/axios`">Axios</router-link>
-      <router-link :to="`/dashboard/element`">Element UI Plus</router-link>
+      <router-link :to="`/demos/element`">Element UI Plus</router-link>
+      <router-link :to="`/demos/dynamic/${id}`">Dynamic</router-link>
+      <router-link :to="`/demos/axios`">Axios</router-link>
+      <router-link :to="`/demos/vueuse`">VueUse</router-link>
     </p>
-    <router-view v-slot="{ Component }">
-      <transition name="slide-fade">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-    <h2>Pinia(Replace Vuex)</h2>
+    <div class="demos-view-wrapper">
+      <router-view v-slot="{ Component }">
+        <transition name="slide-fade">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
+
+    <h2>Pinia</h2>
     <h3>{{ isEven ? 'Even' : 'Odd' }}</h3>
     <h3>{{ count }}</h3>
     <div>
@@ -88,5 +92,8 @@ const asyncAdd = () => store.asyncIncrease()
     flex-direction: column;
     justify-content: center;
   }
+}
+.demos-view-wrapper {
+  padding: 40px;
 }
 </style>
