@@ -1,15 +1,18 @@
 {
   "name": "vite-vue3-ts-element-sass-template",
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:test": "vite build --mode test",
     "serve": "vite preview",
-    "lint": "eslint --ext .ts,.js,.vue --fix ./src",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "@vueuse/core": "^10.7.0",
@@ -32,12 +35,20 @@
     "eslint": "^8.55.0",
     "eslint-plugin-todo-ddl": "^1.1.1",
     "jsdom": "^22.1.0",
+    "lint-staged": "^15.2.0",
     "sass": "^1.69.5",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
     "unplugin-auto-import": "^0.17.2 ",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.0.8",
     "vitest": "^1.0.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

@@ -30,7 +30,8 @@ function registerRouteGuard(router: Router) {
     if (to.meta.isAdmin) {
       try {
         console.log(to)
-      } catch (error) {
+      }
+      catch (error) {
         // if (error instanceof NotAllowedError) {
         //     // ... 处理错误，然后取消导航
         //     return false
