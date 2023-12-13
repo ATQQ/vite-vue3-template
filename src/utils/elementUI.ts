@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 
 // 完整引入
 import ElementPlus from 'element-plus'

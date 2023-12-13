@@ -6,6 +6,7 @@ import router from './router'
 
 import App from './App.vue'
 import Axios from './apis/ajax'
+
 // import mountElementUI from './utils/elementUI'
 
 document.title = import.meta.env.VITE_APP_TITLE

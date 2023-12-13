@@ -7,14 +7,14 @@ const useStore = defineStore('storeId', {
     count: 0
   }),
   getters: {
-    isEven: (state) => state.count % 2 === 0
+    isEven: state => state.count % 2 === 0
   },
   actions: {
     synIncrease() {
       this.count += 1
     },
     async asyncIncrease() {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await new Promise(resolve => setTimeout(resolve, 1000))
       this.count += 1
     }
   }
