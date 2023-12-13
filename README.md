@@ -7,8 +7,8 @@
 * [x] [Pinia](https://pinia.vuejs.org/) - replace vuex
 * [x] [Vue-Router](https://router.vuejs.org/)
 * [x] [Axios](https://github.com/axios/axios)
-* [x] [Provide/inject](https://v3.vuejs.org/guide/component-provide-inject.html#provide-inject)
-* [x] [polyfill.io](https://github.com/Financial-Times/polyfill-service)
+* [x] [Provide/inject](https://vuejs.org/guide/components/provide-inject.html#provide-inject)
+* [x] [polyfill.io](https://github.com/JakeChampion/polyfill-service)
 * [x] [Element UI Plus](https://github.com/element-plus/element-plus)
 * [x] [VueUse](https://vueuse.org/)
 
@@ -36,7 +36,7 @@ Visit：[https://github.com/ATQQ/vite-vue3-template/generate](https://github.com
 ### install dep
 need install pnpm
 ```sh
-# pnpm8要求 Node >= 16
+# pnpm8
 npm i -g pnpm
 ```
 
