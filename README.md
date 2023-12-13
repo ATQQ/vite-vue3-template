@@ -20,6 +20,7 @@
 * [x] [Eslint 8](https://eslint.org/) + [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 * [x] [Vitest 1.0](https://vitest.dev/) - unit testing
 * [x] [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks#readme) - Git Hooks
+* [x] [commitlint](https://commitlint.js.org/#/) - - commit message lint
 
 ## Use This Template
 ```sh
@@ -56,5 +57,5 @@ pnpm build
 
 ### Preview Build
 ```sh
-pnpm serve
+pnpm preview
 ```
