@@ -12,7 +12,9 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
-    "postinstall": "npx simple-git-hooks"
+    "cz": "git add . && czg",
+    "postinstall": "simple-git-hooks",
+    "updatehooks": "git config core.hooksPath .git/hooks/ && rm -rf .git/hooks && npx simple-git-hooks"
   },
   "dependencies": {
     "@vueuse/core": "^10.7.0",
@@ -24,14 +26,18 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.5",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@tsconfig/node18": "^2.0.1",
     "@types/node": "^18.19.3",
-    "@vitejs/plugin-vue": "^2.3.4",
+    "@vitejs/plugin-vue": "^4.5.2",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vitest/coverage-v8": "^1.0.4",
     "@vitest/ui": "^1.0.4",
     "@vue/test-utils": "^2.4.3",
     "c8": "^8.0.1",
+    "cz-git": "^1.8.0",
+    "czg": "^1.8.0",
     "eslint": "^8.55.0",
     "eslint-plugin-todo-ddl": "^1.1.1",
     "jsdom": "^22.1.0",
@@ -47,7 +53,8 @@
     "vitest": "^1.0.4"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx --no-install commitlint --edit \"$1\""
   },
   "lint-staged": {
     "*": "eslint --fix"
